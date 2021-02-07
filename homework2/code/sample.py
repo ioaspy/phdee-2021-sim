@@ -37,6 +37,7 @@ control_data = control[['electricity','sqft','temp']]
 treatment = data[data['retrofit']==1]
 treatment_data = treatment[['electricity','sqft','temp']]
 
+
 # Generate a table of means, standard deviations and p-values-----------------------------------------------------------------
 ## Generate means-------------------------------------------------------------------------------------------------------------
 means_control = control_data.mean()
