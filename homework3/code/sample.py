@@ -196,7 +196,7 @@ output1 = pd.DataFrame(np.column_stack([c_1_mean,c_1_ci]))
 output2=pd.DataFrame(np.column_stack([c_2_ame,c_2_ci]))
 
 ## Row and column names
-rownames = pd.concat([pd.Series(['sqft','retrofit','temp','constant']),pd.Series([' ',' ',' ',' '])],axis = 1).stack() # Note this stacks an empty list to make room for CIs
+rownames = pd.concat([pd.Series(['ln(sqft)','retrofit','ln(temp)','constant']),pd.Series([' ',' ',' ',' '])],axis = 1).stack() # Note this stacks an empty list to make room for CIs
 colname1 = ['Coefficient estimates']
 
 ## Append CIs, # Observations, row and column names
@@ -230,7 +230,7 @@ lowbar = np.array(array_new - lb_new)
 highbar = np.array(ub_new - array_new)
 plt.errorbar(y = array_new, x = np.arange(2), yerr = [lowbar,highbar], fmt = 'o', capsize = 5)
 plt.ylabel('Estimate size')
-plt.xticks(np.arange(2),['sqft', 'temp'])
+plt.xticks(np.arange(2),['ln(sqft)', 'ln(temp)'])
 plt.xlim((-0.5,2.5)) # Scales the figure more nicely
 plt.axhline(linewidth=2, color='r')
 plt.savefig('samplebars.eps',format='eps')
