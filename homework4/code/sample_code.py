@@ -138,7 +138,7 @@ se_all['Intercept']=se_all['Intercept']-se_all[0]
 # Generate a table of coefficients and standard deviations for the observed variables 
 
 ## Set the row and column names
-rownames = pd.concat([pd.Series(['λ(t=2017)','a','g(i)','treat(i,t)']),pd.Series([' ',' ',' ',' '])],axis = 1).stack() 
+rownames = pd.concat([pd.Series(['lamda(t=2017)','a','g(i)','treat(i,t)']),pd.Series([' ',' ',' ',' '])],axis = 1).stack() 
 colnames = [('Coefficients','(s.e.)')] # Two rows of column names
 
 ## Format means and std devs to display to two decimal places
