@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+}
+\usepackage{natbib}
+
+\usepackage{titlesec}
+  
+\title{Homework 5}
+\author{Ioanna Maria Spyrou}
+\date{Spring semester 2021}
+  
+\begin{document}
+  
+\maketitle
+
+
+1.In Table 1 in column (1) we can see that the coefficient of treated has changed from -9591.35 to -8956.78. That change can be attributed to the fact that we use the whole sample of bycatch. The effect of treatment is lower since now in case of treatment bycatch is less by 8956.78 pounds. \\
+
+2.In Table 1 in column (2) we can see that the coefficient of treated has changed to -8436.31. Again the change can be attributed to adding Shrimp, Salmon and firm size variables. Now bycatch is less by 8436.31 pounds in case of treatment.
+
+\begin{table}[ht]
+    \centering
+    \input{coeftable.tex}
+    \caption{Regressions coefficients table with standard errors.}
+    \label{tab:coeftable}
+\end{table}
+
+\end{document}
