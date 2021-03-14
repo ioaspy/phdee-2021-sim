@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+}
+\usepackage{natbib}
+
+\usepackage{titlesec}
+  
+\title{Homework 7}
+\author{Ioanna Maria Spyrou}
+\date{Spring semester 2021}
+  
+\begin{document}
+  
+\maketitle
+
+
+1. The coefficient on miles per gallon is -22.2121, which means that the more miles per gallon the car does, the cheaper it is. This could be the case if our data included fast cars, which the less fuel efficient they are the faster they are and so more expensive. The data include sedan and SUV, so we might suspect that this outcome is not valid.\\
+\\
+2. When estimating coefficient on mpg, there might be endogeneity issues, since the price is affected by other characteristics may have to do with the car's characteristics or technology. So the price cannot be attributed only to fuel efficiency, but to other factors that affect price through fuel efficiency.\\
+\\
+3.(a),(b),(c) See table \ref{tab:coeftable}:
+
+\begin{table}[ht]
+    \centering
+    \input{coeftable.tex}
+    \caption{Sample regression coefficients table with standard errors.}
+    \label{tab:coeftable}
+\end{table}
+(d) The exclusion restriction for (a) is that weight is not correlated with the error term in equation (1), for 
+(b) that $weight^2$ is not correlated with the error term in (1) and for (c) that height is not correlated with the error term in (1). These instruments have no direct effect on price but only through fuel efficiency, so the instruments are uncorrelated with the error term in equation (1).
+\\
+(e) The estimated coefficients on mpg show that using weight and $weight^2$ as instruments, the effect of mpg hat had similar positive effect on price equal to 150.43 and 157.06 respectively. For height the effect of mpg hat on price is greater and equal to 10165.74. The F-statistic for significance of the instruments in the first stage exceeds 10, so they are acceptable.  \\
+\\
+4. The coefficient is the same as in 3(a), but the standard error is 63.051, so greater than than the one found in 3(a), which was 62.16. This is because the error in the first case is not correct. Standard errors from two-step procedure are incorrect and usually smaller than the correct ones that are calculated from software in IVGMM procedure. The standard errors obtained in the second stage are not valid because they don't take into account that mpg hat is an estimate itself.
+
+
+
+\end{document}
